@@ -1,11 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    font-weight: 200;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #0d0d0e, #313741);
-    color: #db6363;
-    background-color: #020000;
+    background: linear-gradient(to bottom, #0d0d0e, #01112d);
+    color: #050101;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 nav {
@@ -19,17 +26,18 @@ nav {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(234, 4, 4, 0.5);
-    animation-name: ss;
-    animation-duration: 3s;
+    animation: slideDown 1s ease-in-out;
 }
-@keyframes ss {
-    from{
-        transform: translateX(-400px);
-    }
+
+@keyframes slideDown {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
+
 nav h1 {
     margin: 0;
     font-size: 24px;
+    color: #fff;
 }
 
 nav ul {
@@ -40,16 +48,17 @@ nav ul {
     gap: 15px;
 }
 
-nav ul li {
-    display: inline;
-}
-
 nav ul li a {
     color: #e82b2b;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
-    animation: cdkey 10s ease;
+    animation: bounceIn 1.5s ease;
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 nav ul li a:hover {
@@ -57,43 +66,19 @@ nav ul li a:hover {
 }
 
 section {
-
-    margin: 80px 320px;
+    margin: 100px auto;
     padding: 20px;
+    max-width: 800px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    width: 800px;
-    background-image: linear-gradient(to right,brown, orange);
-    animation: jk 5s ease;
-
-    
+    background-image: linear-gradient(to right, brown, orange);
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
-section h2 {
-    margin-bottom: 10px;
-    color: #080806;
-    font-weight: 1000;
-}
-
-section hr {
-    border: none;
-    height: 2px;
-    background: #050504;
-    margin-bottom: 20px;
-}
-
-section p, section ul {
-    color: #020000;
-}
-
-section ul li {
-    margin-bottom: 10px;
+@keyframes fadeInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 footer {
@@ -104,44 +89,37 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
+    color: white;
+    animation: slideUp 1s ease-in-out;
 }
 
-footer p {
-    margin: 0;
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 a {
     color: #070600;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 a:hover {
     color: #551603;
+    transform: scale(1.1);
 }
-@keyframes cdkey{
-    0%{
-        transform-box: 20px;
-        opacity: 0;
-    }
-    100%{
-        transform: translate(200px);
-        opacity: 1;
-    }
-}
-@keyframes jk{
-    0%{
-        transform-box: 10px;
-        opacity: 0;
-    }
-    100%{
-        text-replace: auto;
-        transform-box: 20px;
-        opacity: 1;
-    }
-}
+
 #contact {
     display: flex;
+    justify-content: center;
     gap: 20px;
+    animation: zoomIn 1.5s ease-in-out;
+}
 
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+h2{
+    text-align: center;
 }
