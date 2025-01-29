@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0d0d0e, #313741);
+    color: #db6363;
+    background-color: #020000;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(234, 4, 4, 0.5);
+    animation-name: ss;
+    animation-duration: 3s;
+}
+@keyframes ss {
+    from{
+        transform: translateX(-400px);
+    }
+}
+nav h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #e82b2b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    animation: cdkey 10s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+section {
+
+    margin: 80px 320px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    width: 800px;
+    background-image: linear-gradient(to right,brown, orange);
+    animation: jk 5s ease;
+
+    
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #080806;
+    font-weight: 1000;
+}
+
+section hr {
+    border: none;
+    height: 2px;
+    background: #050504;
+    margin-bottom: 20px;
+}
+
+section p, section ul {
+    color: #020000;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+a {
+    color: #070600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #551603;
+}
+@keyframes cdkey{
+    0%{
+        transform-box: 20px;
+        opacity: 0;
+    }
+    100%{
+        transform: translate(200px);
+        opacity: 1;
+    }
+}
+@keyframes jk{
+    0%{
+        transform-box: 10px;
+        opacity: 0;
+    }
+    100%{
+        text-replace: auto;
+        transform-box: 20px;
+        opacity: 1;
+    }
+}
+#contact {
+    display: flex;
+    gap: 20px;
+
+}
